@@ -38,6 +38,7 @@ public class PeningOMSMainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pening's All-in-One Order Management System");
 
+        omsTabbedPane.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         omsTabbedPane.addTab("Customer Panel", customerView2);
         omsTabbedPane.addTab("Employee View", employeeView2);
         omsTabbedPane.addTab("Order View", orderView1);
