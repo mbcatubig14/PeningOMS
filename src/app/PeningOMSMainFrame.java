@@ -28,26 +28,24 @@ public class PeningOMSMainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         omsTabbedPane = new javax.swing.JTabbedPane();
-        customerView1 = new view.CustomerView();
-        employeeView1 = new view.EmployeeView();
-        productView1 = new view.ProductSupplierView();
-        placeOrderView1 = new view.PlaceOrderView();
-        orderView2 = new view.OrderView();
+        customerView2 = new view.CustomerView();
+        employeeView2 = new view.EmployeeView();
+        orderView1 = new view.OrderView();
+        placeOrderView2 = new view.PlaceOrderView();
+        productSupplierView1 = new view.ProductSupplierView();
         applicationLabel = new javax.swing.JLabel();
-        logOutButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Pening's All-in-One Order Management System");
 
-        omsTabbedPane.addTab("Customer Panel", customerView1);
-        omsTabbedPane.addTab("Employee Panel", employeeView1);
-        omsTabbedPane.addTab("Product/Supplier View", productView1);
-        omsTabbedPane.addTab("Place Order View", placeOrderView1);
-        omsTabbedPane.addTab("Manage Order/Stats View", orderView2);
+        omsTabbedPane.addTab("Customer Panel", customerView2);
+        omsTabbedPane.addTab("Employee View", employeeView2);
+        omsTabbedPane.addTab("Order View", orderView1);
+        omsTabbedPane.addTab("Place Order View", placeOrderView2);
+        omsTabbedPane.addTab("Product/Supplier View", productSupplierView1);
 
+        applicationLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         applicationLabel.setText("Pening's All-in-One Order Management System");
-
-        logOutButton.setText("Log Out");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -55,25 +53,24 @@ public class PeningOMSMainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(omsTabbedPane)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(applicationLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(logOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(omsTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 874, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(applicationLabel)
+                .addGap(225, 225, 225))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(11, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(applicationLabel)
-                    .addComponent(logOutButton))
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addComponent(applicationLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(omsTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+
+        omsTabbedPane.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -115,12 +112,11 @@ public class PeningOMSMainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel applicationLabel;
-    private view.CustomerView customerView1;
-    private view.EmployeeView employeeView1;
-    private javax.swing.JButton logOutButton;
+    private view.CustomerView customerView2;
+    private view.EmployeeView employeeView2;
     private javax.swing.JTabbedPane omsTabbedPane;
-    private view.OrderView orderView2;
-    private view.PlaceOrderView placeOrderView1;
-    private view.ProductSupplierView productView1;
+    private view.OrderView orderView1;
+    private view.PlaceOrderView placeOrderView2;
+    private view.ProductSupplierView productSupplierView1;
     // End of variables declaration//GEN-END:variables
 }
